@@ -1,0 +1,11 @@
+{
+  "name": "graphql-talk",
+  "version": "0.1.0",
+  "author": "Andrew Baldwin",
+  "private": true,
+  "license": "UNLICENSED",
+  "workspaces": [
+    "apollo-server",
+    "express-server"
+  ]
+}
