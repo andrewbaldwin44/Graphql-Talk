@@ -1,12 +1,11 @@
-const QueryResolvers = {
-  helloWorld: () => "Hello World",
-  reverse: (_, { word }) =>
-    word
-      .split("")
-      .reverse()
-      .join("")
-};
+const UsersQuery = require("./users/users.query");
+const UsersMutation = require("./users/users.mutation");
 
 module.exports = {
-  Query: QueryResolvers
+  Query: {
+    ...UsersQuery
+  },
+  Mutation: {
+    ...UsersMutation
+  }
 };

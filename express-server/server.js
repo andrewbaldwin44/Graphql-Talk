@@ -1,18 +1,11 @@
 const express = require("express");
 const app = express();
 
+const users = require("./routes/users/users.routes");
+
 app
   .use(express.json())
 
-  .get("/hello-world", (_, res) => res.json({ data: "Hello World" }))
-
-  .get("/reverse/:word", (req, res) =>
-    res.json({
-      data: req.params.word
-        .split("")
-        .reverse()
-        .join("")
-    })
-  )
+  .use("/users", users)
 
   .listen(4004);
